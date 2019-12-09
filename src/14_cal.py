@@ -21,4 +21,23 @@ and does the following:
 
 import sys
 import calendar
-from datetime import datetime
+from datetime import date
+
+month = input("Enter number of Month: ")
+month = int(month)
+year = input("Enter a Year: ")
+year = int(year)
+
+def mon(month=0, year=0):
+      if (month==0 and year==0):
+            print(date.today().month)
+            year=date.today().year
+            month=date.today().month
+            return (calendar.month(year,month))
+      if (month>0 and year==0):
+            year=date.today().year
+            return (calendar.month(year, month))
+      if (month>0 and year>0):
+            return calendar.month(year,month)
+            
+
